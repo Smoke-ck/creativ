@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 320px;
+}
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5px;
+}
+$hover_color:#ff0036;
+@import "header";
+@import "why";
+@import "about";
+@import "portfolio";
+@import "product";
+@import "clients";
+@import "teamwork";
+@import "skills";

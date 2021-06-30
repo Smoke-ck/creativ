@@ -1,0 +1,197 @@
+.clients {
+    background-color: rgb(0, 0, 0, 0.9);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 500px;
+        height: 1px;
+        background-color:$hover_color;
+        bottom: 0;
+        left:50%;
+        transform: translate(-50%);
+    }
+    &::after {
+        content: url(../img/portfolio/shape_3_3717.png);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -12px;
+    }
+    &__tittle {
+        text-align: center;
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 50px;
+        &--other {
+            color: $hover_color;
+        }
+    }
+    &__description {
+        text-align: center;
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        color: #a4a4a4;
+        margin-bottom: 100px;
+        &--other {
+            color: $hover_color;
+        }
+    }
+}
+.clients-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    &__slider {
+        text-align: center;
+        width: 100%;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(270px, 1fr));
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+        justify-content: center;
+    }
+    &__card {
+        height: 116px;
+        background-color: #ffffff;
+        box-shadow: inset 0px 0px 68px 0px rgba(0,0,0,0.74);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__card-tittle {
+        font-family: Raleway;
+        font-size: 24.2px;
+        line-height: 29px;
+        font-weight: 500;
+        color: #292626;
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 27px;
+            height: 28px;
+            border-radius:3px;
+            background-color: #383637;
+            top:0;
+            left:-35px;
+        }
+        &::after {
+            content: url(../img/clients/first.png);
+            position: absolute;
+            top:0;
+            left:-45px;
+        }
+        &--second {
+            &::after {
+                content: url(../img/clients/second.png);
+                position: absolute;
+                top:0;
+                left:-40px;
+            }
+        }
+        &--third {
+            &::after {
+                content: url(../img/clients/third.png);
+                position: absolute;
+                top:-2px;
+                left:-37px;
+            }
+        }
+        &--fours {
+            &::after {
+                content: url(../img/clients/fours.png);
+                position: absolute;
+                top:0;
+                left:-37px;
+            }
+        }
+    }
+    &__tittle {
+        font-family: Raleway;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 50px;
+    }
+    &__description {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        color: #a4a4a4;
+        margin-bottom: 47px;
+    }
+    &__name {
+        font-family: Raleway;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ff0036;
+        margin-bottom: 20px;
+    }
+    &__photo {
+        margin-bottom: 20px;
+    }
+}
+.our-clients .fotorama__arr.fotorama__arr--prev {
+    opacity: 0;
+}
+.our-clients .fotorama__arr.fotorama__arr--next {
+    opacity: 0;
+}
+.our-clients .fotorama__stage {
+    min-height: 270px;
+    height: 270px !important;
+    padding: 0;
+}
+.our-clients .fotorama__wrap{
+    width: 100% !important;
+    margin-bottom: 20px;
+}
+.our-clients .fotorama__nav__frame.fotorama__nav__frame--dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #e0e0e0;
+    margin-left: 5px;
+}
+.our-clients .fotorama__nav__frame.fotorama__nav__frame--dot.fotorama__active {
+    background-color: $hover_color;
+}
+.our-clients .fotorama__stage::before {
+    display: none;
+}
+.our-clients .fotorama__stage::after {
+    display: none;
+}
+@media(max-width:1169px) {
+    .our-clients .fotorama__stage {
+        min-height: 320px;
+        height: 320px !important;
+        padding: 0;
+    }
+}
+@media(max-width:767px) {
+    .clients {
+        &::before {
+            width: 300px;
+        }
+    }
+    .clients-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

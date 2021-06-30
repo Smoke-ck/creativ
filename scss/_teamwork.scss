@@ -1,0 +1,137 @@
+.teamwork {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-bottom: 50px;
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 500px;
+        height: 1px;
+        background-color: #262626;
+        bottom: 0;
+        left:50%;
+        transform: translate(-50%);
+    }
+    &::after {
+        content: url(../img/about/shape_3_3659.png);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: -12px;
+    }
+    &__tittle {
+        text-align: center;
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #262626;
+        margin-bottom: 50px;
+        &--other {
+            color: $hover_color;
+        }
+    }
+    &__description {
+        text-align: center;
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        color: #505050;
+        margin-bottom: 90px;
+        &--other {
+            color: $hover_color;
+        }
+    }
+}
+.teamwork-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-Fill,minmax(270px,1fr));
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-content: space-between;
+    &__card {
+        border: 1px solid #e7e7e7;
+        text-align: center;
+        &:hover {
+            border: 1px solid #262626;
+            transition: 0.5s;
+        }
+    }
+    &__tittle {
+        font-family: Raleway;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #262626;
+        margin-bottom: 24px;
+    }
+    &__description {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        color: #505050;
+        margin-bottom: 30px;
+    }
+    &__card:hover &__tittle {
+        color: $hover_color;
+    }
+    &__card:hover &__photo{
+        opacity: 0;
+        transition: 0.5s;
+    }
+    &__card:hover &__hidden {
+        opacity: 1;
+        transition: 0.5s;
+    }
+    &__card:hover &__background {
+        background-color: #262626;
+        transition: 0.5s;
+    }
+    &__background {
+        background-color: #ffffff;
+        margin-bottom: 30px;
+        position: relative;
+        border: none;
+    }
+    &__photo {
+        width: 100%;
+        object-fit: cover;
+    }
+    &__hidden {
+        opacity: 0;
+        width: 160px;
+        height: 45px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: 2;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-around;   
+        align-items: center; 
+    }
+    &__link {
+        text-decoration: none;
+        background-image: url(../img/teamwork/shape_3_copy_8515.png);
+        width: 45px;
+        height: 41px;
+        color: $hover_color;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+}
+@media(max-width:767px) {
+    .teamwork {
+        &::before {
+            width: 300px;
+        }
+    }
+}

@@ -1,0 +1,184 @@
+.product {
+    padding-top: 100px;
+    padding-bottom: 190px;
+    &__tittle {
+        text-align: center;
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #262626;
+        margin-bottom: 50px;
+        &--other {
+            color:$hover_color;
+        }
+    }
+    &__description {
+        text-align: center;
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        color: #505050;
+        margin-bottom: 100px;
+        &--other {
+            color: $hover_color;
+        }
+    }
+}
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(3 ,370px);
+    grid-column-gap: 20px;
+    justify-content: space-around;
+    &__click {
+        height: 53px;
+        border: 1px solid #e7e7e7;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+        &:hover {
+            background-color: $hover_color;
+        }
+        &--right {
+            justify-content: flex-start;
+        }
+    }
+    &__click:hover > &__link {
+        color: #ffffff;
+        &::before {
+            color:#ffffff;
+        }
+        &::after {
+            color: $hover_color;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        font-family: Raleway;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #262626;
+        margin-right: 70px;
+        position: relative;
+        &::before {
+            content: '\f111';
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            color:#e7e7e7;
+            font-size: 37px;
+            position: absolute;
+            right: -50px;
+            top:-10px;
+        }
+        &::after {
+            content: '\f00c';
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right:-38px;
+            font-size: 13px;
+            top:4px;
+        }
+        &--right {
+            margin-left: 70px;
+            margin-right: 0;
+            &::before {
+                left:-50px;
+                right:0;
+            }
+            &::after {
+                left:-38px;
+                right: 0;
+            }
+        }
+    }
+    &__background {
+        width: 370px;
+        height: 482px;
+        background-color: #d8d8d8;
+        border-radius: 10px;
+        position: relative;
+    }
+    &__image {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        z-index: 5;
+        &--under {
+            position: absolute;
+            bottom:-150px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        &--lower {
+            position: absolute;
+            bottom: -150px;
+            left: 50%;
+            transform: translate(-50%);
+            z-index: 6;
+        }
+    }
+    &__button {
+        font-family: Raleway;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #ffffff;
+        width: 170px;
+        height: 50px;
+        background-color: #393939;
+        position: absolute;
+        bottom: -80px;
+        z-index: 6;
+        left:50%;
+        transform: translate(-50%);
+        border: none;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+            color:$hover_color;
+        }
+    }
+}
+@media(max-width:1169px) {
+    .product-content {
+        grid-template-columns: 1fr;
+        &__background {
+            justify-self: center;
+            margin-bottom: 200px;
+        }
+        &__click {
+            justify-content: center;
+        }
+    }
+}
+@media(max-width:767px) {
+    .product {
+        padding-bottom: 100px;
+    }
+    .product-content {
+        &__background {
+            margin-bottom: 90px;
+            width: 300px;
+        }
+        &__image {
+            max-width: 300px;
+            &--lower {
+                display: none;
+            }
+            &--under {
+                display: none;
+            }
+        }
+        &__link {
+            margin-right: 10px;
+            font-size:16px ;
+        }
+    }
+}

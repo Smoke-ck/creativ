@@ -1,0 +1,56 @@
+.skills {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.skills-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-Fill,minmax(150px,1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    justify-content: center;
+    &__card {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__percent {
+        width: 145px;
+        height: 145px;
+        border-radius: 50%;
+        border: 3px solid $hover_color; 
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+    &__number {
+        font-family: Lato;
+        font-size: 40px;
+        line-height: 94px;
+        font-weight: 300;
+        color: #ff0036;
+        &--other {
+            color: #000000;
+        }
+    }
+    &__tittle {
+        font-family: Raleway;
+        font-size: 20px;
+        line-height: 1.2;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #262626;
+        margin-bottom: 25px;
+    }
+    &__description {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 400;
+        color: #505050;
+        text-align: center;
+    }
+}

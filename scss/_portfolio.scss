@@ -1,0 +1,150 @@
+.portfolio {
+    padding:100px 0;
+    background-color: #262626;
+    position: relative;
+    margin-bottom: 50px;
+    &__container {
+        text-align: center;
+        max-width: 1400px;
+        padding: 0 0;
+    }
+    &__tittle {
+        font-family: Raleway;
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 25px;
+    }
+    &__link {
+        text-decoration: none;
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #a4a4a4;
+        
+        &:hover {
+            color:#ff0036;
+        }
+    }
+    &__click {
+        margin-right: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    &::before {
+        content: url(../img/portfolio/shape_3_3717.png);
+        position: absolute;
+        bottom: -12px;
+        left:50%;
+        transform: translate(-50%);
+    }
+    &::after {
+        content:'';
+        display: block;
+        position: absolute;
+        width: 504px;
+        height: 1px;
+        background-color: #ff0036;
+        left:50%;
+        transform: translate(-50%);
+        bottom: 0;
+    }
+}
+.portfolio-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+    justify-items: center;
+    &__inside {
+        display: grid;
+        grid-template-columns: 400px 300px;
+        &--reverse {
+            grid-template-columns: 300px 400px;
+        }
+    }
+    &__card {
+        height: 350px;
+        background-image: url(../img/portfolio/rectangle_22_copy_2_7869.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.5) inset;
+        }
+        &--second {
+            background-image: url(../img/portfolio/2.jpg);
+        }
+        &--third {
+            background-image: url(../img/portfolio/3.jpg);
+        }
+        &--fourth {
+            background-image: url(../img/portfolio/4.jpg);
+        }
+        &--fifth {
+            background-image: url(../img/portfolio/5.jpg)
+        }
+        &--sixth {
+            background-image: url(../img/portfolio/6.jpg)
+        }
+        &--seventh {
+            background-image: url(../img/portfolio/7.jpg)
+        }
+        &--eight {
+            background-image: url(../img/portfolio/8.jpg)
+        }
+    }
+    &__card:hover &__tittle {
+        display: block;
+    }
+    &__tittle {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 700;
+        color: #ffffff;
+        text-decoration: none;
+        display: none;
+        position: relative;
+        &::before {
+            content: '\f067';
+            font-family: 'Font Awesome\ 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top:-30px;
+            left:50%;
+            transform: translate(-50%);
+        }
+    }
+}
+@media(max-width:767px) {
+    .portfolio {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__click {
+            margin-bottom: 15px;
+        }
+        &::after {
+            width: 300px;
+        }
+    }
+    .portfolio-cards {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        &__inside {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            justify-self: center;
+        }
+    }
+}
